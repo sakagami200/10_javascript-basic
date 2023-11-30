@@ -38,7 +38,7 @@
     })
 
     //×2
-    
+
 
     //NodeList なので for 文でそれぞれのボタンに click イベントを登録する。(addEventListener)
     for (let i = 0; i < mtFujiBtn.length; i++) {
@@ -47,7 +47,55 @@
       })
     }
 
+    //次の画像を表示
+    nextBtn.addEventListener("click", function () {
+      const ++;//インクリメントは、＋１
+      imageArea.setattribute("src", "images/" + fujiImg_list[count]);
+      //0だから最初の画像に戻る
+    }else {
+      const++;//インクリメントは、＋１
+      immageArea.setattribute("src", "images/" + fujiImg_list[count]);
+      console.log(count);
+    });
+
     //ボタンをクリックすると、画像の src 属性に配列 fujiImg_list 内の要素が設定される（setAttribute）ことで画像への path が設定されます。
+
+    //前の画像を表示
+    preBtn.addEventListener("click", function () {
+      if (conut)
+        const--; //デクリメント
+      imageArea.setattribute("src", "imges/" + fujiImg_list[conut]);
+      const word
+      console.log(count);
+    });
+
+
+    const n1 = 1;
+    const n2 = 2;
+
+    if (n1 == 1 || n2 === 2) {
+      console.log(true); //boolean型なので""はなくても良い。
+    } else {
+      console.log(false);
+    }
+
+    //論理積 n2が1のとき trueとfalse→false
+    if (n1 === 1 && n2 === 1) {
+      console.log(true); //boolean型なので""はなくても良い。
+    } else {
+      console.log(false);
+    }
+
+    //n2が２のとき trueとtrue→true
+    if (n1 === 1 && n2 === 2) {
+      console.log(true); //boolean型なので""はなくても良い。
+    } else {
+      console.log(false);
+    }
+
+
+
+
   </script>
 </body>
 
