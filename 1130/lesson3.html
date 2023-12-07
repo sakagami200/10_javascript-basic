@@ -13,7 +13,7 @@
         <li>猫</li>
     </ul>
     <div class="fnArea"></div>
-
+    <button class="lesserafim">ルセラフィムメンバー</button>
     <p class="result"></p>
 
     <script>
@@ -89,16 +89,51 @@
             for (let i = 0; i < members.length; i++) { //工程を何回やるかの回数
                 const liElm = document.createElement("li"); //liを作ってる
                 liElm.textContent = members[i];//liの文字
-                console.log(liElm); //表示
+                console.log(liElm, ulElm); //表示
+                ulElm.appendChild(liElm);
             }
+            memberArea.innerHTML = "";
+            memberArea.appendChild(ulElm);
         }
 
 
         //関数の実行
-        memberPush(member_list);//LESLAFIMのメンバー
-        menubarPush(mugiwara_list);//麦わらの一味
+        //memberPush(member_list);//LESLAFIMのメンバー
+        //menubarPush(mugiwara_list);//麦わらの一味
+
+        //ボタンをとる
+        const lesserafimBtn = document.querySelector(".lesserafim");
+        const onepeaceBtn = document.querySelector(".onepeace");
+
+        lesserafimBtn.addEventListener("click", function () {
+            console.log("ルセラフィム");
+        });
+
+        onepeaceBtn.addEventListener("click", function () {
+
+        })
 
 
+
+        //引数1と引数2を足す、関数の定義
+        const addition = function (a, b) {
+            const c = a + b;
+            console.log(c); //出力を関数が決める
+        }
+
+        //関数の実行
+        addition(10, 11); //コンソールに２１と表示される。
+        addition(30, "6"); //306
+
+        //戻り値のある関数の定義
+        const addition2 = function (a, b) {
+            const c = a * b
+            return c; //戻り値　＊値の出力を関数の外で行いたい。
+        }
+
+        //関数の実行
+        const result = addition2(5, 5); //25
+        console.log(result); //コンソールに25と表示される。
     </script>
 </body>
 
