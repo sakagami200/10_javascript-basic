@@ -7,6 +7,16 @@
 4. 11月9日（木）　配列を使った要素の追加
 5. 12月14日（木）　コールバック関数、アロー関数
 6. 1月11日（木）　フォームとオブジェクト
+7. 1月25日（木）　json とdate()
+
+
+## 1月25日（木）
+
+- json(javaScript object Notition)=
+
+const now = new Date();
+console.log(now); //Sat Dec 18 2021 21:06:07 GMT+0900 (日本標準時)
+
 
 
 ## 1月11日（木）
