@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>後期テスト</title>
+</head>
+
+<body>
+    <div class="counter">
+        <button class="decrease">-</button>
+        <span class="count">0</span>
+        <button class="increase">+</button>
+    </div>
+
+    <style>
+        .modal {
+            transition: all 1s ease-in;
+            opacity: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #eee;
+            border: 1px solid #cdcdcd;
+            padding: 1rem;
+        }
+
+        .modal.active {
+            opacity: 1;
+        }
+    </style>
+
+    <button id="openModalBtn">Open Modal</button>
+
+    <div class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>モーダルウィンドウです。</p>
+        </div>
+    </div>
+
+    <style>
+        .tabcontent.show {
+            display: block;
+        }
+
+        .tabcontent {
+            display: none;
+        }
+    </style>
+
+
+    <div class="tab">
+        <button class="tablinks">Tab1</button>
+        <button class="tablinks">Tab2</button>
+        <button class="tablinks">Tab3</button>
+    </div>
+
+    <div class="tabcontent show">
+        <h3>Tab1</h3>
+        <p>タブ1のコンテンツです。</p>
+    </div>
+    <div class="tabcontent">
+        <h3>Tab2</h3>
+        <p>タブ2のコンテンツです。</p>
+    </div>
+    <div class="tabcontent">
+        <h3>Tab3</h3>
+        <p>タブ3のコンテンツです。</p>
+    </div>
+
+
+    <ul class="list">
+        <li>バナナ</li>
+        <li>りんご</li>
+        <li>みかん</li>
+        <li>パイナップル</li>
+    </ul>
+    <button class="resultBtn">結果を表示</button>
+    <ul class="result"></ul>
+
+    <script>
+        const fruitsArray = ["キウイ", "パパイヤ", "マンゴー"];
+
+    </script>
+
+
+    <ul class="weather">
+        <li>晴れ</li>
+        <li>曇り</li>
+        <li>雨</li>
+        <li>雪</li>
+    </ul>
+    <p class="opinion"></p>
+
+    <script>
+        const weathers = document.querySelectorAll(".weather li");
+        for (let word of weathers) {
+            word.addEventListener("click", () => {
+                say(word.textContent);
+            });
+        }
+    </script>
+
+
+
+</body>
+
+<script>
+    //問題１
+    const name = "大谷翔平の";
+    const number = "背番号は";
+    const num = "20";
+    const two = 2;
+    const seven = 7;
+    const ending = "です。"
+
+    //大谷翔平の背番号は17です。
+    const ohtaniText = document.createElement("p");
+    ohtaniText.textContent = name + number + (num / two + seven) + ending;
+    document.body.appendChild(ohtaniText);
+
+
+    //問題２
+
+    //下記の緑黄色社会のアルバム「pink blue」の楽曲を変数 pinkBlueに配列として代入して、「ミチヲユケ」をbodyにpタグで追加ください。
+    //ピンクブルー
+    //Starry Drama
+    //ジブンセイフク
+    //あうん
+    //ミチヲユケ
+    //うそつき
+    //陽はまた昇るから
+    //湿気っている
+    //Don!! White Rabbit
+    //さもなくば誰がやる
+    //Slow dance
+
+    //const pinkBlue = [
+    //    { num: "ピンクブルー" },
+    //  { num2: "Starry Drama" },
+    // { num3: "ジブンセイフク" },
+    //    { num4: "あうん" },
+    //   { num5: "ミチヲユケ" },
+    //   { num6: "うそつき" },
+    //   { num7: "陽はまた昇るから" },
+    //   { num8: "湿気っている" },
+    //   { num9: "Don!! White Rabbit" },
+    //  { num10: "さもなくば誰がやる" },
+    // { num11: "Slow dance" }
+    //];
+
+
+    //問題３
+
+
+
+    //問題４
+
+
+    const counter = document.querySelector(".counter");
+    const decreaseButton = counter.querySelector(".decrease");
+    const countSpan = counter.querySelector(".count");
+    const increaseButton = counter.querySelector(".increase");
+
+    let count = 0;
+
+    decreaseButton.addEventListener("click", () => {
+        count--;
+        if (count < 0) {
+            count = 0;
+        }
+        countSpan.textContent = count;
+    });
+
+    increaseButton.addEventListener("click", () => {
+        count++;
+        countSpan.textContent = count;
+    });
+
+    //問題６
+    const openModalBtn = document.getElementById("openModalBtn");
+    const modal = document.querySelector(".modal");
+    const closeBtn = document.querySelector(".close");
+
+    openModalBtn.addEventListener("click", () => {
+        modal.classList.add("active");
+    });
+
+    closeBtn.addEventListener("click", () => {
+        modal.classList.remove("active");
+    });
+
+
+    //問題７
+
+    const tablinks = document.querySelectorAll(".tablinks");
+    const tabcontents = document.querySelectorAll(".tabcontent");
+
+    for (const tablink of tablinks) {
+        tablink.addEventListener("click", (event) => {
+            const target = event.target;
+
+            for (const tabcontent of tabcontents) {
+                tabcontent.classList.remove("tabcontent show");
+                tabcontent.classList.remove("tabcontent");
+            }
+
+        });
+    }
+
+
+    //問題８
+
+    const fruitsArray = [];
+
+    const list = document.querySelector(".list");
+    const resultBtn = document.querySelector(".resultBtn");
+    const resultUl = document.querySelector(".result");
+
+    list.addEventListener("click", (event) => {
+        const target = event.target;
+
+        fruitsArray.push(target.textContent);
+    });
+
+    resultBtn.addEventListener("click", () => {
+        resultUl.innerHTML = "";
+
+        for (const fruit of fruitsArray) {
+            resultUl.innerHTML += `<li>${fruit}</li>`;
+        }
+    });
+
+    //問題９
+
+
+    const weathers = document.querySelectorAll(".weather li");
+    for (let word of weathers) {
+        word.addEventListener("click", () => {
+            say(word.textContent);
+        });
+    }
+
+    function say(weather) {
+        const opinions = {
+            "晴れ": "今日は良い天気で、気持ちが良いです。",
+            "雨": "雨音が心地よく、静かな時間を楽しめます。",
+            "曇り": "曇り空、穏やかな一日が待っている感じです。",
+            "雪": "雪景色が美しく、雪合戦やスキーに最適です。",
+        };
+
+        const opinion = opinions[weather];
+
+        const opinionP = document.querySelector(".opinion");
+        opinionP.textContent = opinion;
+    }
+
+
+
+</script>
+
+</html>
