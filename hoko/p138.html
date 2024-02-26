@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>1日目練習問題</title>
+</head>
+
+<body>
+    <h1>問題3-1</h1>
+    <p>「sample3-9.html」と同じ処理を行うプログラムを作りなさい。この際、変数numには1を代入し、if文の条件は「c」となるようにしなさい。なお、ファイル名は「prob3-1.html」とすること</p>
+    <script>
+        const bodyelm = document.querySelector("body")
+        const num = 1
+        if (num >= 100) {
+            bodyelm.insertAdjacentHTML("beforeend", "<p>numは100以上</p>");
+        } else {
+            bodyelm.insertAdjacentHTML("beforeend", "<p>numは100未満</p>");
+        }
+    </script>
+
+    <h1>問題3-2</h1>
+    <p>次のサンプルの条件分岐をif分だけでなくswich分で行うように書き換えなさい。</p>
+    <!-- <!DOCTYPE html>
+        <html>
+        <head>
+    <title>prob3-2</title>
+        <meta charset="UTF-8" />
+</head>
+<body>
+    <h1>数値による条件分岐</h1>
+<script>
+const num = 1;
+//条件分岐
+if(num == 1){
+    document.write("<p>numは1です</p>");
+}eles if(num == 2){
+    document.write("<p>numは2です</p>");
+}eles if(num == 3){
+    document.write("<p>numは3です</p>");
+}eles{
+    document.write("<p>numは1,2,3以外の数です</p>");
+}
+</script>
+</body>
+</html>
+-->
+    <script>
+        let n = 1;
+        switch (n) {
+            case 1:
+                document.write("<p>ONE</p>");
+                break;
+            case 2:
+                document.write("<p>TOW</p>");
+                break;
+            case 3:
+                document.write("<p>THREE</p>");
+                break;
+            default:
+                document.write("<p>OTHER</p>");
+                break;
+        }
+    </script>
+
+    <h1>問題3-2</h1>
+    <p>次のサンプルをfor分だけでなくswich文を使ったプログラムに書き換えなさい。</p>
+    <!-- <!DOCTYPE html>
+        <html>
+        <head>
+    <title>prob3-3</title>
+        <meta charset="UTF-8" />
+</head>
+<body>
+    <h1>繰り返し処理</h1>
+<script>
+    for(let num = 1; num <= 5; num++){
+        document.write("<p>"+num+"</p>");
+    }
+        </script>
+        </body>
+        </html>
+    -->
+    ...
+</body>
+
+</html>
