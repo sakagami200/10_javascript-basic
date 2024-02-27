@@ -50,21 +50,21 @@ if(num == 1){
         let n = 1;
         switch (n) {
             case 1:
-                document.write("<p>ONE</p>");
+                document.write("<p>numは1です</p>");
                 break;
             case 2:
-                document.write("<p>TOW</p>");
+                document.write("<p>numは2です</p>");
                 break;
             case 3:
-                document.write("<p>THREE</p>");
+                document.write("<p>numは3です</p>");
                 break;
             default:
-                document.write("<p>OTHER</p>");
+                document.write("<p>numは1,2,3以外の数です</p>");
                 break;
         }
     </script>
 
-    <h1>問題3-2</h1>
+    <h1>問題3-3</h1>
     <p>次のサンプルをfor分だけでなくswich文を使ったプログラムに書き換えなさい。</p>
     <!-- <!DOCTYPE html>
         <html>
@@ -78,11 +78,16 @@ if(num == 1){
     for(let num = 1; num <= 5; num++){
         document.write("<p>"+num+"</p>");
     }
-        </script>
-        </body>
-        </html>
+</script>
     -->
-    ...
+    <script>
+        let num2 = 1;
+        while (num2 <= 5) {
+            bodyelm.insertAdjacentHTML("beforeend", "<p>" + num2 + "</p>");
+
+            num2++;
+        }
+    </script>
 </body>
 
 </html>

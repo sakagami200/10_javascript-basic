@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>1日目練習問題</title>
+</head>
+
+<body>
+    <h1>問題4-1</h1>
+    <p>Chromeのコンソールを用いて、次の処理を行いなさい</p>
+    <ul>
+        <li>a:変数arrayを空の配列にする</li>
+        <li>b:arrayに,pushメソッドを用いて1,2,3という値を挿入する
+        </li>
+        <li>c:for~of文とconsole.logを用いて配列arrayの内容を表示する</li>
+    </ul>
+    <script>
+        const array = [];
+        array.push(1, 2, 3);
+        for (let i = 0; i < array.length; i++) {
+            console.log(array[i]);
+        }
+    </script>
+
+
+    <h1>問題4-2</h1>
+    <p>[sumple4-14.html]を次のように変更しなさい</p>
+    <ul>
+        <li>a:h1タグによる見出しを「小学生が将来なりたい職業ランキング」とする</li>
+        <li>b:ランキングの値をリストとして保存する
+        </li>
+        <li>c:番号付きのリストでリストの結果を出力する</li>
+    </ul>
+
+
+    <!--
+        <!DOCTYPE html>
+<html lang="ja">
+<head>
+        <title>1日目練習問題</title>
+        <meta charset="UTF-8" />
+</head>
+<body>
+    <h1>人気のフルーツ一覧</h1>
+    <ul>
+    </ul>
+</body>
+</html>
+    -->
+    <h1>「小学生が将来なりたい職業ランキング」</h1>
+    <ol>
+
+    </ol>
+
+    <script>
+        const fruits = ["サッカー選手・監督", "野球選手・監督", "医師", "ユーチューバー"];
+        const olelm = document.querySelector("ol");
+        for (let i = 0; i < fruits.length; i++) {
+            olelm.insertAdjacentHTML("beforeend", "<li>" + fruits[i] + "</li>")
+        }
+    </script>
+
+
+    <h1>問題4-3</h1>
+    <p>「sample4-24.html」を次のように変更しなさい。なお、作成するファイル名は「prob4-3.html」とすること</p>
+    <ul>
+        <li>h1タグによる見出しを「人口が多い国ランキング」とする</li>
+        <li>国名と人口の組み合わせを連想配列として保存する
+        </li>
+        <li>テーブルで順位、国名、人口の組み合わせの表を作る</li>
+    </ul>
+
+
+    <h1>人口が多い国ランキング</h1>
+    <table border="1" style="border-collapse:collapse">
+        <tr>
+            <th>順位</th>
+            <th>国名</th>
+            <th>人口（億人）</th>
+        </tr>
+    </table>
+
+    <script>
+        const conutries = {
+            China: [1, "中国", 14.48],
+            India: [2, "インド", 14.06],
+            Indonesia: [3, "インドネシア", 2.79],
+        };
+        const tableelm = document.querySelector("table");
+        for (let key in conutries) {
+            tableelm.insertAdjacentHTML("beforeend", "<tr><td>" + conutries[key][0] + "</td></tr>")
+        }
+
+
+    </script>
+</body>
+
+</html>
