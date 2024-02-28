@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>1日目練習問題</title>
+</head>
+
+<body>
+    <h1>問題5-1</h1>
+    <p>例題5-1の答え「example5-1.html」を次のように変更しなさい。なお、作成するファイル名は「prlb5-1.html」とすること</p>
+
+    <!DOCTYPE html>
+    <html>
+
+    <head>
+        <meta charset="UTF-8" />
+        <title>example5-1</title>
+    </head>
+
+    <body>
+        <h1>最大値を求める関数</h1>
+        <script>
+            //     function maxNamber(n1, n2) {
+            //         if (n1 > n2) {
+            //             return n1;
+            //         }
+            //         return n2;
+            //     }
+            // let num1 = 11;
+            // let num2 = 16;
+
+            // let n = maxNumber(num1, num2);
+            // document.write("<p>" + num1 + "と" + num2 + "のうち大きい値は" + n + "です。</p>");
+
+        </script>
+    </body>
+
+    </html>
+    <ul>
+        <li>h1タグによる表題を「最小限を求める関数」に変更する</li>
+        <li>2つの数値の最小値を返すmaxNumber関数を、最小値を返すminNumber関数に変更する</li>
+        <li>minNumber関数を利用して11と16の、最小の数を返す処理に変更する</li>
+    </ul>
+
+
+    <h1>「最小限を求める関数」</h1>
+    <script>
+        const num1 = 11
+        const num2 = 16
+
+        const result = minNumber(num1, num2);
+
+        function minNumber(n1, n2) {
+            if (n1 > n2) {
+                return n2;
+            } else {
+                return n1;
+            }
+        }
+
+        console.log(result);
+
+        const bodyelm = document.querySelector("body");
+        bodyelm.insertAdjacentHTML("beforeend", "<p>" + num1 + "と" + num2 + "のうち小さい値は" + result + "です。</p>");
+
+    </script>
+
+
+    <h1>問題5-2</h1>
+    <p>引数として渡した整数の数だけ、
+    <p>hellojavascript</p>
+    という文字列をdocument.writeを用いて出力するhellos関数を作りなさい。また、hellos関数を使って、次の実行結果のように3回「hellojavascript」という文字列を表示させなさい。なお、ファイル名は「prob5-2.html」とすること。
+    </p>
+
+    <script>
+
+        function helloes(num) {
+            for (let i = 0; i < num; i++) {
+                bodyelm.insertAdjacentHTML("beforeend", "<p>HelloJavaScript</p>")
+            }
+        }
+
+        helloes(3);
+
+
+    </script>
+
+
+</body>
+
+</html>
