@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>問題10</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .content {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            height: 50%;
+            width: 100%;
+            background-color: #f0f0f0;
+            padding: 10px;
+            text-align: center;
+            transition: top 0.2s ease-in-out;
+        }
+
+        .content.active {
+            top: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>スライドアップ</h1>
+    <p>ボタンを押すと、メッセージがスライドアップします。</p>
+    <button class="btn">スライドアップ</button>
+
+    <div class="content">
+        <p>メッセージ</p>
+    </div>
+
+    <script>
+        //ここにプログラミングしてください。
+        document.addEventListener("DOMContentLoaded", function () {
+            // ボタン要素を取得
+            var button = document.querySelector(".btn");
+            // メッセージのコンテンツ要素を取得
+            var content = document.querySelector(".content");
+
+            // ボタンがクリックされたときの処理を追加
+            button.addEventListener("click", function () {
+                // メッセージのコンテンツの現在の表示状態をチェック
+                var isContentVisible = content.classList.contains("active");
+
+                // スライドアップかスライドダウンかを判定して実行
+                if (isContentVisible) {
+                    // メッセージが表示されている場合、スライドダウンアニメーションを実行
+                    content.style.top = "100%";
+                    button.textContent = "スライドアップ"; // ボタンのテキストを「スライドアップ」に変更
+                    content.classList.remove("active"); // activeクラスを削除
+                } else {
+                    // メッセージが非表示の場合、スライドアップアニメーションを実行
+                    content.style.top = "50%";
+                    button.textContent = "スライドダウン"; // ボタンのテキストを「スライドダウン」に変更
+                    content.classList.add("active"); // activeクラスを追加
+                }
+            });
+        });
+    </script>
+    <!DOCTYPE html>
+    <html lang="ja">
+
+    <head>
+        <meta charset="UTF-8" />
+        <title>問題9</title>
+    </head>
+
+    <body>
+        <h1>面積計算オブジェクト</h1>
+        <script>
+            const calc = {
+                a: 0,
+                b: 0,
+                circle: function (a) {
+                    const result = a * a * 3.14;
+                    return result;
+                },
+                rectangle: function (a, b) {
+                    const result = a * b;
+                    return result;
+                },
+                triangle: function (a, b) {
+                    const result = a * b / 2;
+                    return result;
+                },
+
+            };
+
+            calc.a = 5;
+            calc.b = 10;
+
+            const bodyElm = document.body;
+            bodyElm.insertAdjacentHTML("beforeend", "<p>" + "半径" + calc.a + "の円の面積は" + calc.circle(calc.a) + "です。" + "</p>");
+            bodyElm.insertAdjacentHTML("beforeend", "<p>" + "縦" + calc.a + "横" + calc.b + "の長方形の面積は" + calc.rectangle(calc.a, calc.b) + "です。" + "</p>");
+            bodyElm.insertAdjacentHTML("beforeend", "<p>" + "底辺" + calc.a + "高さ" + calc.b + "の三角形の面積は" + calc.triangle(calc.a, calc.b) + "です。" + "</p>");
+
+        </script>
+    </body>
+
+    </html>
+
+    <ul class="num2"></ul>
+    <script>
+        const numArea = document.querySelector(".num");
+        for (let num = 0; num < 5; num++) {
+            numArea.insertAdjacentHTML("beforeend", "<li>" + (num + 1) + "</li>");
+        }
+
+    </script>
+
+
+</body>
+
+</html>

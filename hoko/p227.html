@@ -84,8 +84,75 @@
 
         helloes(3);
 
-
     </script>
+
+    <h1>問題5-3</h1>
+    <p>例題5-2の答え「example5-2.html」を利用して、次の表を作りなさい。なお、ファイル名は「prob5-3.html」とすること。</p>
+
+    <!DOCTYPE html>
+    <html>
+
+    <head>
+        <meta charset="UTF-8" />
+        <title>example5-2</title>
+    </head>
+
+    <body>
+        <!-- <h1>社員データ</h1>
+        <table border="1" style="border-collapse:collapse">
+            <tr>
+                <th>名前</th>
+                <th>年齢</th>
+                <th>出身地</th>
+            </tr>
+            <script>
+                let staff = [
+                    ["佐藤", 41, "東京"],
+                    ["鈴木", 41, "大阪"],
+                    ["林", 41, "札幌"],
+                ];
+
+                staff.forEach(function(data){
+                    document.write("<tr>");
+                        data.forEach(function(item){
+                            document.write("<td>" + item + "</td>");
+                        });
+                        document.write("</tr>");
+                });
+            </script>
+        </table> -->
+
+        <h1>住みたい街ランキング</h1>
+        <table border="1" style="border-collapse:collapse">
+            <tr>
+                <th>順位</th>
+                <th>住みたい街</th>
+                <th>都道府県</th>
+            </tr>
+            <script>
+
+                const city = [
+                    [1, "横浜市", "神奈川県"],
+                    [2, "札幌市", "北海道"],
+                    [3, "福岡市", "福岡県"],
+                    [4, "名古屋市", "愛知県"],
+                    [5, "世田谷区", "東京県"],
+                ];
+
+                const tableelm = document.querySelector("table");
+                city.forEach(function (data) {
+                    console.log(data[0]);
+                    tableelm.insertAdjacentHTML("beforeend", "<tr><td>" + data[0] + "</td>" + "<td>" + data[1] + "</td>" + "<td>" + data[2] + "</td></tr>");
+                });
+            </script>
+        </table>
+
+    </body>
+
+    </html>
+    <script>
+    </script>
+
 
 
 </body>

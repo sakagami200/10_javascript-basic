@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>1日目練習問題</title>
+</head>
+
+<body>
+    <h1>問題6-1</h1>
+
+
+    <!DOCTYPE html>
+    <html>
+
+    <head>
+        <meta charset="UTF-8" />
+        <title>example6-1</title>
+    </head>
+
+    <body>
+        <h1>計算オブジェクト</h1>
+        <script>
+            let calc = {
+                a: 0,
+                b: 0,
+
+                add: function () {
+                    let ans = this.a + this.b;
+                    return ans;
+                },
+                sub: function () {
+                    let ans = this.a - this.b;
+                    return ans;
+                }
+            }
+
+            calc.a = 10;
+            calc.b = 5;
+
+            const bodyelm = document.querySelector("body");
+            bodyelm.insertAdjacentHTML("beforeend", "<p>a=" + calc.a + "</p>" + "<p>b=" + calc.b + "</p>" + "<p>a+b=" + calc.add() + "</p>" + "<p>a-b=" + calc.sub() + "</p>");
+
+        </script>
+    </body>
+
+    </html>
+</body>
+
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>1日目練習問題</title>
+</head>
+
+<body>
+    <h1>問題7-1</h1>
+    <p>「sample4-14.html」のdocument.writeではなくDOMを操作して実現する形に作り変えなさい。この際、DOMツリーにからのulタグを作り追加し、その中にliタグの要素を挿入すること。</p>
+
+    <!DOCTYPE html>
+    <html>
+
+    <head>
+        <meta charset="UTF-8" />
+        <title>sample4-14</title>
+    </head>
+
+    <body>
+        <h1>人気のフルーツ一覧</h1>
+        <p>HTMLの説明として間違っているものを1つ選びなさい。</p>
+        <ul>
+            <script>
+                let element = document.querySelector("ul");
+
+                let fruits = ["りんご", "もも", "バナナ"];
+                for (let i = 0; i < fruits.length; i++) {
+                    let liLast = document.createElement("li");
+                    liLast.textContent = fruits[i];
+                    element.appendChild(liLast);
+                }
+            </script>
+    </body>
+
+    </html>
+
+
+
+    <h1>問題7-2</h1>
+    <p>次のHTMLにJavaScriptの処理を追加し、ボタンをクリックしたとき、「ボタンを押してください」というメッセージが「ボタンが押されました」に変わるようにしなさい
+    </p>
+
+    <!DOCTYPE html>
+    <html>
+
+    <head>
+        <meta charset="UTF-8" />
+        <title>sample7-2</title>
+    </head>
+
+    <body>
+        <h1>メッセージの変換</h1>
+        <p id="msg">ボタンを押してください</p>
+        <input type="button" value="ボタン" id="btn">
+        <script>
+            let button = document.getElementById("btn");
+
+
+            button.addEventListener("click", function () {
+                let element = document.getElementById("msg");
+                element.textContent = "ボタンが押されました"
+            });
+        </script>
+    </body>
+
+    </html>
+
+
+</html>
+</body>
+
+</html>
